@@ -1,0 +1,492 @@
+/* ---------- Reset e base ---------- */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f1ec;
+    color: #555555;
+}
+
+h1, h2, h3, .presentazione::first-letter {
+    font-family: 'Playfair Display', Georgia, serif; /* Aggiornato */
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background-image: url("Media/Immagini/header-bg.jpg");
+    background-color: #3d3f49;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 90px 16px 40px;
+    border-bottom: 4px solid #ffcc00;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.sottotitolo {
+    color: #e7dec3;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* ---------- Navigazione ---------- */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border: 1px solid #858585;
+    border-radius: 5%;
+    display: inline-block;
+    padding: 8px 14px;
+}
+
+nav a i {
+    margin-right: 5px;
+}
+
+nav a:hover {
+    background-color: #ffcc00;
+    color: #222222;
+    border-color: #ffcc00;
+}
+
+/* ---------- Contenuto principale ---------- */
+main {
+    margin: 0 auto;
+    padding: 0 16px;
+}
+main section:first-of-type {
+    margin-top: -55px;
+    position: relative;
+    z-index: 10;
+}
+section {
+    margin-top: 24px;
+}
+
+h2 {
+    color: #1f3a75; /* blu scuro */
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.card-sezione h2:before {
+    content: "◆";
+    display: inline-block;
+    color: #ffcc00;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+/* ---------- Sezione "Chi sono" ---------- */
+
+.card-sezione {
+    background-color: #ffffff;
+    position: relative;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.foto-profilo {
+    display: block;
+    max-width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #ffcc00;
+    margin: 0 auto 15px;
+}
+
+.presentazione::first-letter {
+    font-size: 55px;
+    font-weight: bold;
+    color: #1f3a75;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+/* ---------- Sezione "Competenze" ---------- */
+
+.sottotitolo-grigio {
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.stack-header-label {
+    font-size: 0.85rem;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1f3a75;
+    margin-bottom: 12px;
+}
+
+.tabella-intestazione {
+    display: none;
+    overflow: hidden;
+    background-color: #fdf8e3;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #1f3a75;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.tabella-intestazione span:first-child {
+    float: left;
+    padding-left: 36px;
+}
+
+.tabella-intestazione span:last-child {
+    float: right;
+}
+
+.competenze-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.competenze-lista li {
+    overflow: hidden;
+    padding: 16px 0;
+    border-bottom: 1px solid #ededf2;
+}
+
+.comp-info i {
+    float: left;
+    color: #1f3a75;
+    width: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 2px 16px 0 0;
+}
+
+.comp-testo {
+    overflow: hidden;
+}
+
+.comp-testo strong {
+    color: #222222;
+}
+
+.comp-testo p {
+    margin: 4px 0 0;
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.barra-livello {
+    width: 100%;
+    height: 8px;
+    background-color: #ededf2;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.riempimento {
+    height: 100%;
+    background-color: #ffcc00;
+    border-radius: 4px;
+}
+
+/* Percentuali di riempimento */
+.riempimento.html { width: 90%; }
+.riempimento.css  { width: 80%; }
+.riempimento.git  { width: 70%; }
+.riempimento.vscode { width: 85%; }
+.riempimento.markdown { width: 75%; }
+
+/* ---------- Sezione "Esperienze" ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+caption {
+    padding-bottom: 12px;
+    text-align: left;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #1f3a75;
+}
+
+thead tr {
+    background-color: #fdf8e3;
+}
+
+th {
+    color: #1f3a75;
+    font-size: 0.85rem;
+    padding: 8px;
+}
+
+td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+}
+
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #ededf2;
+}
+
+/* ---------- Sezione "Progetti" ---------- */
+.progetto {
+    padding: 16px;
+    margin-top: 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #ededf2;
+    border-radius: 6px;
+    border-left: 4px solid #ededf2;
+}
+
+.progetto-ricetta, .progetto-portfolio { border-left-color: #1f3a75; background-color: #faf8ee; }
+.progetto-card { border-left-color: #ffcc00; }
+
+.progetto.evidenziato {
+    background-color: #ffffff;
+    border: 1px solid #eadfa8;
+}
+
+.badge-new {
+    display: inline-block;
+    background-color: #f11515;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 2px 4px;
+    margin-left: 6px;
+    border-radius: 2px;
+    font-size: 0.6rem;
+}
+.progetto h3 {
+    margin-top: 0;
+}
+
+.progetto p {
+    font-size: 0.85rem;
+    color: #666666;
+    margin-bottom: 16px;
+}
+
+.link-github {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #1f3a75;
+    text-decoration: none;
+}
+
+.link-github i {
+    margin-right: 4px;
+}
+
+.link-github:hover {
+    text-decoration: underline;
+    text-decoration-color: #ffcc00;
+}
+
+.link-dettaglio-container {
+    text-align: right;
+    margin-top: 24px;
+}
+
+.link-dettaglio {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #1f3a75;
+    text-decoration: underline;
+    text-decoration-color: #ffcc00;
+}
+
+/* ---------- Sezione "Contattami" (form) ---------- */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #1f3a75;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    font-size: 0.95rem;
+    border: 1px solid #c9c6b8;
+    background-color: #f7f5ed;
+    border-radius: 4px;
+    color: #555555;
+    font-family: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    cursor: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='none' stroke='%23555555' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+    background-size: 10px 6px;
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+}
+
+select:focus {
+    background-color: #ffffff;
+    border-color: #1f3a75;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #bfae90;
+    font-style: italic;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.consenso {
+    margin-top: 18px;
+}
+
+.consenso label {
+    display: block;
+    margin-left: 26px;
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+.consenso input {
+    float: left;
+    width: auto;
+    margin: 5px 0 0;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    background-color: #1f3a75;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+}
+
+button[type="submit"] i {
+    margin-right: 4px;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+/* ---------- Piè di pagina ---------- */
+footer {
+    margin-top: 60px;
+    background-color: #151d33;
+    color: #b8bfd0;
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 0.85rem;
+}
+
+footer .social {
+    margin-bottom: 16px;
+}
+
+footer .social a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+footer .social a:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ---------- Responsive: tablet (min-width: 768px) ---------- */
+@media (min-width: 768px) {
+    .hero { padding: 150px 16px 40px; }
+    .hero h1 { font-size: 4rem; }
+    nav ul li { margin: 0 2px; }
+    nav a { padding: 10px 20px; }
+    h2 { font-size: 1.9rem; }
+    .card-sezione { padding: 30px; }
+    .foto-profilo { float: left; margin: 0 25px 15px 0; }
+    .tabella-intestazione { display: block; }
+    .tabella-intestazione span:last-child { width: 35%; }
+    .comp-info { float: left; width: 60%; }
+    .barra-livello { float: right; width: 35%; margin-top: 6px; }
+    th { padding: 10px 16px; }
+    td { padding: 12px 16px; }
+    .progetto { padding: 20px; }
+    button[type="submit"] { width: auto; }
+}
+
+/* ---------- Responsive: desktop (min-width: 1200px) ---------- */
+@media (min-width: 1200px) {
+    main { max-width: 760px; }
+    .card-sezione { max-width: 800px; }
+    .comp-info { width: 350px; }
+    .tabella-intestazione span:last-child { width: 300px; }
+    .barra-livello { width: 300px; }
+}
