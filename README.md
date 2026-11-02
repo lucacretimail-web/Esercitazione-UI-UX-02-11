@@ -117,4 +117,4 @@ CSS:
 - layout costruito solo con box model (float, width, margin, padding, inline-block)
 - pulsante Invia a tutta larghezza
 - @media (min-width: 768px): hero e titoli tornano grandi, foto a sinistra con float, competenze su una riga (testo 60% e barra 35% in float), intestazione "Livello" visibile, padding più larghi
-- @media (min-width: 1200px): solo larghezze bloccate: main 760px, card 800px, testo competenze 350px, barra e "Livello" 300px 
+- @media (min-width: 1200px): solo larghezze bloccate: main 760px, card 800px, testo competenze 350px, barra e "Livello" 300px
