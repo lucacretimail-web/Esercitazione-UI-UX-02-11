@@ -46,11 +46,12 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 30px 0 0;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline-block;
     margin: 4px 2px;
 }
 
@@ -115,13 +116,23 @@ h2 {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+.chi-sono-contenuto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.chi-sono-testo {
+    align-self: stretch;
+}
+
 .foto-profilo {
-    display: block;
+    flex-shrink: 0;
     max-width: 140px;
     height: 140px;
     border-radius: 50%;
     border: 5px solid #ffcc00;
-    margin: 0 auto 15px;
 }
 
 .presentazione::first-letter {
@@ -141,92 +152,31 @@ h2 {
     margin-bottom: 24px;
 }
 
-.stack-header-label {
-    font-size: 0.85rem;
-    font-weight: lighter;
-    font-style: italic;
-    color: #1f3a75;
-    margin-bottom: 12px;
-}
-
-.tabella-intestazione {
-    display: none;
-    overflow: hidden;
-    background-color: #fdf8e3;
-    padding: 10px 0;
-    font-weight: bold;
-    font-size: 0.85rem;
-    color: #1f3a75;
-    border-radius: 4px;
-    margin-bottom: 8px;
-}
-
-.tabella-intestazione span:first-child {
-    float: left;
-    padding-left: 36px;
-}
-
-.tabella-intestazione span:last-child {
-    float: right;
-}
-
 .competenze-lista {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .competenze-lista li {
-    overflow: hidden;
-    padding: 16px 0;
-    border-bottom: 1px solid #ededf2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #1f3a75;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 999px;
 }
 
-.comp-info i {
-    float: left;
-    color: #1f3a75;
-    width: 20px;
-    text-align: center;
-    font-size: 1.1rem;
-    margin: 2px 16px 0 0;
-}
-
-.comp-testo {
-    overflow: hidden;
-}
-
-.comp-testo strong {
+.competenze-lista li:first-child {
+    background-color: #ffcc00;
     color: #222222;
 }
-
-.comp-testo p {
-    margin: 4px 0 0;
-    font-size: 0.85rem;
-    color: #666666;
-    line-height: 1.4;
-}
-
-.barra-livello {
-    width: 100%;
-    height: 8px;
-    background-color: #ededf2;
-    border-radius: 4px;
-    overflow: hidden;
-    margin-top: 12px;
-}
-
-.riempimento {
-    height: 100%;
-    background-color: #ffcc00;
-    border-radius: 4px;
-}
-
-/* Percentuali di riempimento */
-.riempimento.html { width: 90%; }
-.riempimento.css  { width: 80%; }
-.riempimento.git  { width: 70%; }
-.riempimento.vscode { width: 85%; }
-.riempimento.markdown { width: 75%; }
 
 /* ---------- Sezione "Esperienze" ---------- */
 table {
@@ -471,11 +421,8 @@ footer .social a:hover {
     nav a { padding: 10px 20px; }
     h2 { font-size: 1.9rem; }
     .card-sezione { padding: 30px; }
-    .foto-profilo { float: left; margin: 0 25px 15px 0; }
-    .tabella-intestazione { display: block; }
-    .tabella-intestazione span:last-child { width: 35%; }
-    .comp-info { float: left; width: 60%; }
-    .barra-livello { float: right; width: 35%; margin-top: 6px; }
+    .chi-sono-contenuto { flex-direction: row; align-items: flex-start; gap: 25px; }
+    .chi-sono-testo { flex: 1; }
     th { padding: 10px 16px; }
     td { padding: 12px 16px; }
     .progetto { padding: 20px; }
@@ -486,7 +433,4 @@ footer .social a:hover {
 @media (min-width: 1200px) {
     main { max-width: 760px; }
     .card-sezione { max-width: 800px; }
-    .comp-info { width: 350px; }
-    .tabella-intestazione span:last-child { width: 300px; }
-    .barra-livello { width: 300px; }
 }

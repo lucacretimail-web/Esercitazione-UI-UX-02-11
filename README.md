@@ -118,3 +118,40 @@ CSS:
 - pulsante Invia a tutta larghezza
 - @media (min-width: 768px): hero e titoli tornano grandi, foto a sinistra con float, competenze su una riga (testo 60% e barra 35% in float), intestazione "Livello" visibile, padding più larghi
 - @media (min-width: 1200px): solo larghezze bloccate: main 760px, card 800px, testo competenze 350px, barra e "Livello" 300px
+
+Step. 9 - Refactoring da box model a flexbox
+
+HTML:
+
+-Primo intervento su html: pulizia struttura, alcune sezioni mai chiuse o componenti orfane
+-Rimozione div barre e riempimenti 
+- Header / nav 
+Nessuna modifica HTML. nav ul diventa il flex container (flex-wrap, centrato), i li i flex item.
+- Chi sono: modifica HTML necessaria
+Oggi la foto è un float tra i fratelli; in flex serve un contenitore riga.
+Foto + testo avvolti in un div riga (flex), i due p in un secondo div; tolti i tag orfani </em></strong></p>
+- Competenze
+Li ridotti a chip (solo icona + nome), ul flex wrap; rimossi .comp-info, .comp-testo, descrizioni, .tabella-intestazione e .stack-header-label; sottotitolo senza "percentuali"
+- Esperienze
+Nessuna modifica, resta table (dati, non layout)
+- Progetti
+article.progetto.evidenziato (mai chiuso) sostituito da un div contenitore flex wrap, chiuso dopo la terza card; link-dettaglio-container spostato fuori
+- Form e footer
+Nessuna modifica HTML (.consenso e .social diventano flex solo in CSS)
+- Pulizia
+Aggiunti </head>, </body>, </html>; tolto </i> di troppo; virgolette su id="Contatti"
+
+
+CSS: 
+
+Rimozione barre e riempimenti 
+- Pulizia residui
+.barra-livello nei media query, .tabella-intestazione, .stack-header-label, .comp-info, .comp-testo rimossi
+- Header / nav
+nav ul flex (flex-wrap, justify-content center); tolto inline-block dai li
+- Chi sono
+.chi-sono-contenuto flex: colonna su mobile, riga da 768px; .chi-sono-testo flex: 1; .foto-profilo senza float e margin auto, flex-shrink: 0, gap al posto dei margini. Tenuto il float solo su .presentazione::first-letter (capolettera)
+- Competenze
+.competenze-lista flex wrap con gap; li trasformati in chip (sfondo blu, testo bianco, pillola); tolti overflow, padding e border-bottom
+- Esperienze
+Nessuna modifica, resta table
